@@ -1,0 +1,29 @@
+{
+ "metadata": {
+  "name": "",
+  "signature": "sha256:a5638c0d972896564e1c51f26b9b799c00c1fdfe249aa757b75d923dfd7e6c23"
+ },
+ "nbformat": 3,
+ "nbformat_minor": 0,
+ "worksheets": [
+  {
+   "cells": [
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "Condensor, use 0.9?"
+     ]
+    },
+    {
+     "cell_type": "markdown",
+     "metadata": {},
+     "source": [
+      "HyD, most sensitive. Find most intesity in image, scale by this. Turns of if it detects several photons s"
+     ]
+    }
+   ],
+   "metadata": {}
+  }
+ ]
+}
