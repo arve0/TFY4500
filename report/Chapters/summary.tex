@@ -1,0 +1,27 @@
+\chapter{Summary}
+
+In the search for curing cancer researchers have had a clear focus on understanding tumor cells. Though still outnumbered by the number of published articles on tumor cells, studies focusing on tumor cell environment is getting traction. Some studies have shown that the tumor environment, also known as the tumor stroma, may have significant impact on development of a tumor. It's suspected that connective and supporting tissue in the tumor stroma have a significant role in the metastasis, the state when tumor cells spreads to new parts of the body.
+
+In fact research suggest that there is a correlation between structure of collagen tissue and survival of the patient. This can be used in diagnosis, but also suggest that there might be possibilities to avoid cancer cells spreading by altering the tumor stroma. This report will focus on the diagnosis part, in specific on collagen tissue from breast cancer.
+
+In example, one property of tissue structure is alignment and curliness of collagen fibers. An earlier study at NTNU have measured curliness and alignment properties in a manual qualitative manner on a data set of 37 samples. The purpose of this report is documenting project work that has been done on automating the process such that a larger data set can be obtained and studied. To be specific, the project have explored possibilities for obtaining large number of high quality images of breast tissue samples with automated nonlinear microscope scanning. The project have also created some quantitative data from the images.
+
+The goal for this report is informing about the process and the results. The details are:
+\begin{itemize}
+\item Find good parameters for obtaining high quality images
+\item Find an effective way to scan whole glass slides of 135 samples with little human intervention
+\item Store the images in a structured manner so that 
+    \begin{itemize}
+    \item Correlation to patient data is possible
+    \item Quantitative data can be subtracted
+    \end{itemize}
+\item Try some algorithms for creating quantitative data
+\end{itemize}
+
+\textbf{The results are:}
+\begin{itemize}
+\item  Nonlinear scanning microscope with femto-second laser and non-descanned sensors give images with visible fiber structures. Photonmultiplier tubes (PMT) are subject to more noise than hybrid detectors (HyD), but PMT are more reliable when sample contain areas of very high intensity.
+\item Having a way to adjust plane of sample making it horizontal is crucial for scanning an area of $\approx 3$ cm$^2$ without loosing focus. Microscope software should also have a way to define plane of focus before starting the scan, as auto focusing all coordinates is not a viable option due to time constraints, adding 7+ hours to the scan. Using auto focus at regular intervals are neither an option, as it may hit a coordinate with no signal which results in selecting focus at random. It is hard to find a reliable process to detect if little signal is due to focus problems after the scan have been done and it's also cumbersome to rescan selective parts of the glass slide. Tweaking settings of microscope, making xyz-coordinates easily available and storing spatial positions in memory, makes aligning of the sample before scan more effective.
+\item Selecting and grouping specific part of the glass slide already at scanning is preferred, as diving the scan images into groups representing one sample is non-trivial for a data set containing 3-4000 images. In contrast, grouping samples when scanning makes image processing and keeping record of spatial placement to specific tissue samples a trivial task.
+\item Quantifying fiber direction with Fourier transform gives a feature that possibly can be used in classification to separate anisotropic samples from samples having fibers in a few specific directions. Using gradients for creating features have not been successful.
+\end{itemize}
